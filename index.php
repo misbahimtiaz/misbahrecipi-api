@@ -1,1 +1,3 @@
-<?php include_once("./project.html")?>
+<?php 
+    include("./index.html")
+?>
