@@ -1,0 +1,26 @@
+.container{
+    margin-left: 50px;
+}
+
+.container1{
+    margin-right: 50px;
+}
+
+.form{
+    padding: 10px 0px;
+    border: teal solid;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+body h1{
+    text-align: center;
+    margin: 50px;
+    background-color: black;
+    color: white;
+}
+
+.input{
+    width:80%;
+}
