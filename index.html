@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <title>Assignment 1</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta product="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,52 +14,52 @@
     <script src="./eventhandling.js"></script>
   </head>
   <body>
-      <h1>Misbah Imtiaz SP18-BSE-086_A</h1>
+      <h1>Haseeb Yaseen SP18-BCS-047-C</h1>
       <div class="row">
         <div class="col-8 container">
             <table class="table table-striped" id="mytable">
                 <thead>
                     <tr>
-                        <th>product</th>
-                        <th>addtocart</th>
-                        <th>price</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
                         <th>City</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="product">BUNS</td>
-                        <td class="addtocart">yes</td>
-                        <td class="price">21</td>
+                        <td class="name">Haseeb</td>
+                        <td class="gender">Male</td>
+                        <td class="age">21</td>
                         <td class="city">Lahore</td>
                         <td><button type="button" class="btn btn-warning update">Update</button>  <button type="button" class="btn btn-danger del">Delete</button></td>
                     </tr>
                     <tr>
-                        <td class="product">Jelly</td>
-                        <td class="addtocart">yes</td>
-                        <td class="price">20</td>
+                        <td class="name">Umais</td>
+                        <td class="gender">Male</td>
+                        <td class="age">20</td>
                         <td class="city">Lahore</td>
                         <td><button type="button" class="btn btn-warning update">Update</button>  <button type="button" class="btn btn-danger del">Delete</button></td>
                     </tr>
                     <tr>
-                        <td class="product">JAM</td>
-                        <td class="addtocart">no</td>
-                        <td class="price">21</td>
+                        <td class="name">Ayesha</td>
+                        <td class="gender">Female</td>
+                        <td class="age">21</td>
                         <td class="city">Sheikhupura</td>
                         <td><button type="button" class="btn btn-warning update">Update</button>  <button type="button" class="btn btn-danger del">Delete</button></td>
                     </tr>
                     <tr>
-                        <td class="product">Biscuits</td>
-                        <td class="addtocart">yes</td>
-                        <td class="price">21</td>
+                        <td class="name">Najmi</td>
+                        <td class="gender">Male</td>
+                        <td class="age">21</td>
                         <td class="city">Islamabad</td>
                         <td><button type="button" class="btn btn-warning update">Update</button>  <button type="button" class="btn btn-danger del">Delete</button></td>
                     </tr>
                     <tr>
-                        <td class="product">Cakes</td>
-                        <td class="addtocart">no</td>
-                        <td class="price">22</td>
+                        <td class="name">Mehwish</td>
+                        <td class="gender">Female</td>
+                        <td class="age">22</td>
                         <td class="city">Multan</td>
                         <td><button type="button" class="btn btn-warning update" id="update">Update</button>  <button type="button" class="btn btn-danger del">Delete</button></td>
                     </tr>
@@ -69,28 +70,28 @@
                 <h3>Add&Update Form</h3>
                 <div class="form">
                     <div>
-                        <label><b>product</b></label>
-                        <input type="text" product="first-product" placeholder="product" class="input" id="product">
+                        <label><b>Name</b></label>
+                        <input type="text" name="first-name" placeholder="Name" class="input" id="name">
                     </div>
                     <br>
-                    <p class="form-check form-check-inline"><b>addtocart</b></p>
+                    <p class="form-check form-check-inline"><b>Gender</b></p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" product="val" id="inlineRadio2" value="yes">
-                        <label class="form-check-label" for="inlineRadio2">yes</label>
+                        <input class="form-check-input" type="radio" name="val" id="inlineRadio2" value="Male">
+                        <label class="form-check-label" for="inlineRadio2">Male</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" product="val" id="inlineRadio2" value="no">
-                        <label class="form-check-label" for="inlineRadio2">no</label>
+                        <input class="form-check-input" type="radio" name="val" id="inlineRadio2" value="Female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
                     </div>
                     <br>
                     <div>
-                        <label><b>price</b></label>
-                        <input type="number" product="price" value="00" class="input" id="price">
+                        <label><b>Age</b></label>
+                        <input type="number" name="age" value="00" class="input" id="age">
                     </div>
                     <br>
                     <div>
                         <label><b>City</b></label>
-                        <input type="text" product="city" placeholder="City" class="input" id="city">
+                        <input type="text" name="city" placeholder="City" class="input" id="city">
                     </div>
                     <br>
                     <button type="button" class="btn btn-success add">Add</button>
