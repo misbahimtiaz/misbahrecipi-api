@@ -1,4 +1,3 @@
-  
 $(function(){
     $(".del").click(del);
     $(".add").click(add);
@@ -10,22 +9,22 @@ $(function(){
 
 
 
-function del(){   //to delete the row which is created in html pprice
+function del(){   //to delete the row which is created in html page
         $('#mytable').on('click', ".del", function(){
         $(this).closest ('tr').remove ();
         });
 }
 
 function add(){    //to add a row 
-    var product=$("#product").val();
-    var addtocart=$("input[product='val']:checked").val();
-    var price=$("#price").val();
+    var name=$("#name").val();
+    var gender=$("input[name='val']:checked").val();
+    var age=$("#age").val();
     var city=$("#city").val();
 
 
-    if(product!='' && addtocart !=null && price!=null && city!='') //not add untill add all values
+    if(name!='' && gender!=null && age!=null && city!='') //not add untill add all values
     {
-        $("#mytable").append("<tr>"+"<td class='product'>"+product+"</td>"+"<td class='addtocart'>"+addtocart+"</td>"+"<td class='price'>"+price+"</td>"+"<td class='city'>"+city+"</td>"+"<td>"+'<button type="button" class="btn btn-warning update">Update</button> <button type="button" class="btn btn-danger del">Delete</button>'+"</td>"+"</tr>");
+        $("#mytable").append("<tr>"+"<td class='name'>"+name+"</td>"+"<td class='gender'>"+gender+"</td>"+"<td class='age'>"+age+"</td>"+"<td class='city'>"+city+"</td>"+"<td>"+'<button type="button" class="btn btn-warning update">Update</button> <button type="button" class="btn btn-danger del">Delete</button>'+"</td>"+"</tr>");
         
         $("#mytable").off().on('click',".del", function(){  //event binding of del function
             
@@ -33,31 +32,31 @@ function add(){    //to add a row
         });
 
         $("#mytable").off("click",".update").on("click",".update",function(){              //evet binding of update function
-            var product=$(this).closest ('tr').find(".product").text();
-            var price=$(this).closest ('tr').find(".price").text();
+            var name=$(this).closest ('tr').find(".name").text();
+            var age=$(this).closest ('tr').find(".age").text();
             var city=$(this).closest ('tr').find(".city").text();
-            var addtocart=$(this).closest ('tr').find(".addtocart").text();
+            var gender=$(this).closest ('tr').find(".gender").text();
             var index=$(this).closest ('tr').index();
 
 
-                $("#product").val(product);
-                $("#price").val(price);
+                $("#name").val(name);
+                $("#age").val(age);
                 $("#city").val(city);
-                $("input[product=val][value=" + addtocart + "]").prop('checked', true); 
+                $("input[name=val][value=" + gender + "]").prop('checked', true); 
 
                 $(".add").prop("disabled", true);
                 $(".up").removeAttr('disabled');
         
                 $(".up").off().on("click",function(){
-                    product=$("#product").val();
-                    addtocart=$("input[product='val']:checked").val();
-                    price=$("#price").val();
+                    name=$("#name").val();
+                    gender=$("input[name='val']:checked").val();
+                    age=$("#age").val();
                     city=$("#city").val();
 
                     var x = document.getElementById("mytable").rows[index+1].cells;
-                    x[0].innerHTML=product;
-                    x[1].innerHTML=addtocart;
-                    x[2].innerHTML=price;
+                    x[0].innerHTML=name;
+                    x[1].innerHTML=gender;
+                    x[2].innerHTML=age;
                     x[3].innerHTML=city;
         
                     $(".add").removeAttr('disabled');
@@ -73,41 +72,43 @@ function add(){    //to add a row
 }
 
 function rese(){                                //reset form values' function
-    $("#product").val("");
-    $("input[product='val']").prop("checked",false);
-    $("#price").val("");
+    $("#name").val("");
+    $("input[name='val']").prop("checked",false);
+    $("#age").val("");
     $("#city").val("");
 }
 
 function update(){                                        //update function
-    var product=$(this).closest ('tr').find(".product").text();
-    var price=$(this).closest ('tr').find(".price").text();
+    var name=$(this).closest ('tr').find(".name").text();
+    var age=$(this).closest ('tr').find(".age").text();
     var city=$(this).closest ('tr').find(".city").text();
-    var addtocart=$(this).closest ('tr').find(".addtocart").text();
+    var gender=$(this).closest ('tr').find(".gender").text();
     var index=$(this).closest ('tr').index();
 
-        $("#product").val(product);
-        $("#price").val(price);
+        $("#name").val(name);
+        $("#age").val(age);
         $("#city").val(city);
-        $("input[product=val][value=" + addtocart + "]").prop('checked', true);  
+        $("input[name=val][value=" + gender + "]").prop('checked', true);  
     
         $(".add").prop("disabled", true);
         $(".up").removeAttr('disabled');
         
         $(".up").on("click",function(){
             console.log("I am in this");
-            var product=$("#product").val();
-            var addtocart=$("input[product='val']:checked").val();
-            var price=$("#price").val();
+            var name=$("#name").val();
+            var gender=$("input[name='val']:checked").val();
+            var age=$("#age").val();
             var city=$("#city").val();
 
             var x = document.getElementById("mytable").rows[index+1].cells;
-            x[0].innerHTML=product;
-            x[1].innerHTML=addtocart;
-            x[2].innerHTML=price;
+            x[0].innerHTML=name;
+            x[1].innerHTML=gender;
+            x[2].innerHTML=age;
             x[3].innerHTML=city;
 
             $(".add").removeAttr('disabled');
             $(".up").prop("disabled", true);
         });
 }
+
+
